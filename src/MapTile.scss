@@ -1,5 +1,8 @@
 $grass: #27ae60;
-$dimensions: 20px;
+$sea: #0984e3;
+$river: #74b9ff;
+$pavement: #778ca3;
+$dimensions: 50px;
 
 .map-tile {
     width: $dimensions;
@@ -10,7 +13,7 @@ $dimensions: 20px;
 }
 
 .map-tile.sea {
-    background-color: #0984e3;
+    background-color: $sea;
 }
 
 .map-tile.grass {
@@ -28,7 +31,12 @@ $dimensions: 20px;
 }
 
 .map-tile.road {
-    background-color: #778ca3;
+    background-color: $pavement;
+}
+
+.map-tile.bridge {
+    background-color: $pavement;
+    border: $dimensions / 10 solid $river;
 }
 
 .map-tile.building, .map-tile.factory, .map-tile.HQ {
