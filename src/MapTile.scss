@@ -1,0 +1,37 @@
+$grass: #27ae60;
+$dimensions: 20px;
+
+.map-tile {
+    width: $dimensions;
+    min-width: $dimensions;
+    height: $dimensions;
+    min-height: $dimensions;
+    display: table-cell;
+}
+
+.map-tile.sea {
+    background-color: #0984e3;
+}
+
+.map-tile.grass {
+    background-color: $grass;
+}
+
+.map-tile.trees {
+    background-color: #218c74;
+    border: $dimensions / 10 solid $grass;
+}
+
+.map-tile.mountains {
+    background-color: #cc8e35;
+    border: $dimensions / 10 solid $grass;
+}
+
+.map-tile.road {
+    background-color: #778ca3;
+}
+
+.map-tile.building, .map-tile.factory, .map-tile.HQ {
+    background-color: white;
+    border: $dimensions / 10 solid $grass;
+}
