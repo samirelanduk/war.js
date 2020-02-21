@@ -5,7 +5,10 @@ import "./MapTile.scss"
 class MapTile extends Component {
     
     render() {
-        const className = {
+        const {type, above, below, left, right} = this.props
+        const classNames = [];
+
+        classNames.push({
             [MapEnum.SEA]: "sea",
             [MapEnum.PLAINS]: "grass",
             [MapEnum.TREES]: "trees",
@@ -15,9 +18,10 @@ class MapTile extends Component {
             [MapEnum.BUILDINGS]: "building",
             [MapEnum.FACTORY]: "factory",
             [MapEnum.CAPITOL]: "HQ"
-        }[this.props.type]
+        }[type])
+
         return (
-            <div className={"map-tile " + className}></div>
+            <div className={"map-tile " + classNames.join(" ")}></div>
         );
     }
 }
